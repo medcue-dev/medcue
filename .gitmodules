@@ -13,3 +13,6 @@
 [submodule "backend"]
 	path = backend
 	url = git@github.com:medcue-dev/backend.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = https://github.com/medcue-dev/infrastructure.git
