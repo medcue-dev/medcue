@@ -1,0 +1,450 @@
+[
+  {
+    "prd": "user-authentication",
+    "story_id": "US-1",
+    "issue": {
+      "title": "[US-1] Account creation with email/password",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-1\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to create an account with my email and password so I can securely access my medication information\n\n## Acceptance Criteria\n- [ ] User can register with valid email and strong password\n- [ ] Email validation prevents invalid email formats\n- [ ] Password strength requirements are enforced (8+ chars, mixed case, numbers, symbols)\n- [ ] Duplicate email registration is prevented with clear error message\n- [ ] Account creation triggers email verification process\n- [ ] User receives confirmation message after successful registration\n\n## Technical Implementation Notes\n- Implement bcrypt password hashing\n- Email validation using regex or validator library\n- Database unique constraint on email field\n- Integration with email service for verification\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-2",
+    "issue": {
+      "title": "[US-2] Email verification system",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-2\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to verify my email address so I can ensure secure account access and password recovery\n\n## Acceptance Criteria\n- [ ] Verification email sent immediately after registration\n- [ ] Email contains secure verification link with expiration\n- [ ] Clicking link activates account and confirms email\n- [ ] Expired links show appropriate error message\n- [ ] User can request new verification email if needed\n- [ ] Account remains inactive until email is verified\n\n## Technical Implementation Notes\n- Generate secure verification tokens\n- Email template system for verification messages\n- Token expiration handling (24-hour window)\n- Database field for email verification status\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-3",
+    "issue": {
+      "title": "[US-3] Security questions setup",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-3\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to set up security questions so I have an additional account recovery method\n\n## Acceptance Criteria\n- [ ] User can select from predefined security questions\n- [ ] User must answer at least 3 security questions\n- [ ] Answers are case-insensitive but validated for minimum length\n- [ ] Questions and answers are stored securely (hashed)\n- [ ] User can update security questions after authentication\n- [ ] Security questions are required during account recovery\n\n## Technical Implementation Notes\n- Predefined question bank with diverse options\n- Answer hashing for security\n- Database schema for questions and answers\n- Integration with account recovery flow\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-4",
+    "issue": {
+      "title": "[US-4] User login with credentials",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-4\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to log in with my email and password so I can access my medication tracking dashboard\n\n## Acceptance Criteria\n- [ ] User can log in with verified email and correct password\n- [ ] Invalid credentials show clear error message\n- [ ] Account lockout after 5 failed attempts (15-minute lockout)\n- [ ] Successful login redirects to dashboard\n- [ ] Login session expires after 24 hours of inactivity\n- [ ] Remember me option extends session to 30 days\n\n## Technical Implementation Notes\n- JWT token generation with appropriate expiration\n- Rate limiting for login attempts\n- Session management and token refresh\n- Secure cookie handling for remember me\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-5",
+    "issue": {
+      "title": "[US-5] Multi-factor authentication",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-5\n- **Priority**: P0 (Critical)\n- **Story Points**: 8\n\n## User Story\nAs a patient, I want to enable multi-factor authentication so my health information is protected with additional security\n\n## Acceptance Criteria\n- [ ] User can enable/disable MFA in account settings\n- [ ] TOTP (Time-based One-Time Password) support using authenticator apps\n- [ ] QR code generation for easy authenticator app setup\n- [ ] Backup codes provided during MFA setup (10 single-use codes)\n- [ ] MFA required for sensitive actions (password change, data export)\n- [ ] MFA bypass using backup codes when authenticator unavailable\n\n## Technical Implementation Notes\n- TOTP library integration (pyotp or similar)\n- QR code generation for authenticator setup\n- Secure backup code generation and storage\n- MFA middleware for protected endpoints\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-6",
+    "issue": {
+      "title": "[US-6] Remember me functionality",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-6\n- **Priority**: P0 (Critical)\n- **Story Points**: 2\n\n## User Story\nAs a patient, I want a 'remember me' option so I don't have to log in frequently on my trusted devices\n\n## Acceptance Criteria\n- [ ] Remember me checkbox available on login form\n- [ ] Extended session duration (30 days) when enabled\n- [ ] User can view and revoke active sessions\n- [ ] Remember me sessions automatically expire after 30 days\n- [ ] Security warning when enabling remember me on public devices\n- [ ] Session invalidation when password is changed\n\n## Technical Implementation Notes\n- Extended JWT token expiration handling\n- Session management with device tracking\n- Secure token storage in httpOnly cookies\n- Session revocation mechanism\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-7",
+    "issue": {
+      "title": "[US-7] Password reset via email",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-7\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to reset my password via email so I can regain access if I forget my credentials\n\n## Acceptance Criteria\n- [ ] Password reset link available on login page\n- [ ] User enters email address to request password reset\n- [ ] Reset email sent with secure token (1-hour expiration)\n- [ ] Reset link directs to secure password change form\n- [ ] New password must meet strength requirements\n- [ ] All active sessions invalidated after password reset\n\n## Technical Implementation Notes\n- Secure password reset token generation\n- Email template for password reset\n- Token validation and expiration handling\n- Session invalidation on password change\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "user-authentication",
+    "story_id": "US-8",
+    "issue": {
+      "title": "[US-8] Security question recovery",
+      "body": "## PRD Reference\n- **PRD**: User Authentication (user-authentication.md)\n- **User Story**: US-8\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to use security questions for account recovery so I have an alternative if I can't access my email\n\n## Acceptance Criteria\n- [ ] Security question recovery available when email is inaccessible\n- [ ] User must correctly answer all 3 security questions\n- [ ] Questions presented in randomized order\n- [ ] Failed attempts are limited (3 attempts, then 1-hour lockout)\n- [ ] Successful recovery allows password reset\n- [ ] Recovery attempts are logged for security monitoring\n\n## Technical Implementation Notes\n- Security question validation logic\n- Attempt limiting and lockout mechanism\n- Integration with password reset flow\n- Audit logging for recovery attempts\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nUser Registration & Authentication\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-1",
+    "issue": {
+      "title": "[US-1] Scan prescription labels",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-1\n- **Priority**: P0 (Critical)\n- **Story Points**: 8\n\n## User Story\nAs a patient, I want to scan prescription labels with my phone camera so I can quickly add new medications without manual typing\n\n## Acceptance Criteria\n- [ ] Camera access permission requested and handled gracefully\n- [ ] Barcode/QR code scanning accurately extracts medication information\n- [ ] OCR text recognition for prescription label text\n- [ ] User can review and edit extracted information before saving\n- [ ] Error handling for unreadable or damaged labels\n- [ ] Support for common prescription label formats\n\n## Technical Implementation Notes\n- Camera API integration (browser/mobile)\n- Barcode scanning library (ZXing or similar)\n- OCR service integration (Google Vision API or Tesseract)\n- Medication database lookup for validation\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-2",
+    "issue": {
+      "title": "[US-2] Manual medication entry",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-2\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to manually enter medication details so I can add medications when scanning isn't available or accurate\n\n## Acceptance Criteria\n- [ ] Comprehensive medication entry form with all required fields\n- [ ] Medication name autocomplete from FDA drug database\n- [ ] Dosage and strength selection with validation\n- [ ] Schedule and frequency configuration options\n- [ ] Optional fields for notes and special instructions\n- [ ] Form validation with clear error messages\n\n## Technical Implementation Notes\n- Integration with FDA drug database API\n- Autocomplete UI component with search\n- Form validation library\n- Database schema for medication storage\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-3",
+    "issue": {
+      "title": "[US-3] Medication database search",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-3\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to search a comprehensive medication database so I can find accurate information about my medications\n\n## Acceptance Criteria\n- [ ] Search by medication name with fuzzy matching\n- [ ] Filter by medication type, brand vs generic\n- [ ] Display medication details including common dosages\n- [ ] Show drug interactions and warnings\n- [ ] Search results ranked by relevance\n- [ ] Fast search response time (<2 seconds)\n\n## Technical Implementation Notes\n- FDA Orange Book API integration\n- Elasticsearch or similar for fast text search\n- Drug interaction database integration\n- Search result ranking algorithm\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-4",
+    "issue": {
+      "title": "[US-4] Medication photo capture",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-4\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to take photos of my medications so I can visually identify them and verify I'm taking the correct pills\n\n## Acceptance Criteria\n- [ ] Camera integration for medication photography\n- [ ] Multiple photo storage per medication\n- [ ] Photo compression and optimization for storage\n- [ ] Image deletion and replacement options\n- [ ] Photos displayed in medication details view\n- [ ] Privacy controls for photo sharing\n\n## Technical Implementation Notes\n- Image upload and storage system\n- Image compression and resizing\n- Cloud storage integration (AWS S3/CloudFront)\n- Image metadata and association with medications\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-5",
+    "issue": {
+      "title": "[US-5] Custom dosing schedules",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-5\n- **Priority**: P0 (Critical)\n- **Story Points**: 8\n\n## User Story\nAs a patient, I want to create custom dosing schedules so I can track medications with complex timing requirements\n\n## Acceptance Criteria\n- [ ] Flexible schedule creation (daily, weekly, monthly patterns)\n- [ ] Multiple doses per day with specific times\n- [ ] Every other day and custom interval schedules\n- [ ] Seasonal or temporary medication schedules\n- [ ] Schedule preview showing upcoming doses\n- [ ] Easy schedule modification and history tracking\n\n## Technical Implementation Notes\n- Recurring schedule algorithm implementation\n- Cron-like expression parsing for complex schedules\n- Schedule calculation engine\n- Database schema for flexible schedule storage\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-6",
+    "issue": {
+      "title": "[US-6] Multiple daily doses",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-6\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to configure multiple daily doses so I can track medications taken several times per day\n\n## Acceptance Criteria\n- [ ] Configure 1-8 doses per day with specific times\n- [ ] Time picker with AM/PM or 24-hour format\n- [ ] Dose spacing validation (minimum 1 hour between doses)\n- [ ] Different dosage amounts for different times of day\n- [ ] Visual schedule preview for the day\n- [ ] Bulk time adjustment for all doses\n\n## Technical Implementation Notes\n- Time picker UI component\n- Schedule validation logic\n- Daily dose calculation engine\n- Time zone handling for scheduling\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "frontend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-7",
+    "issue": {
+      "title": "[US-7] As-needed medications",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-7\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to track as-needed medications so I can log when I take PRN medications and monitor usage patterns\n\n## Acceptance Criteria\n- [ ] Mark medications as 'as-needed' vs scheduled\n- [ ] Quick logging interface for PRN medication intake\n- [ ] Optional reason/symptom tracking for PRN usage\n- [ ] Maximum daily/weekly limits with warnings\n- [ ] Usage pattern analysis and reporting\n- [ ] Easy access to PRN medications from dashboard\n\n## Technical Implementation Notes\n- PRN medication data model\n- Quick-log UI components\n- Usage analytics and pattern detection\n- Limit validation and warning system\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-9",
+    "issue": {
+      "title": "[US-9] Mark doses as taken",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-9\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to quickly mark doses as taken so I can maintain accurate medication adherence records\n\n## Acceptance Criteria\n- [ ] One-click dose confirmation from medication list\n- [ ] Timestamp recording for when dose was marked taken\n- [ ] Ability to mark dose taken early or late with time adjustment\n- [ ] Visual confirmation of successful dose logging\n- [ ] Undo option for accidentally marked doses\n- [ ] Batch marking for multiple doses\n\n## Technical Implementation Notes\n- Optimistic UI updates for fast response\n- Timestamp handling with time zone support\n- Undo mechanism with time limits\n- Batch operation API endpoints\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "frontend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-10",
+    "issue": {
+      "title": "[US-10] Log missed doses",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-10\n- **Priority**: P0 (Critical)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to log missed doses and the reason so I can track adherence issues and discuss them with my doctor\n\n## Acceptance Criteria\n- [ ] Mark doses as missed with optional reason selection\n- [ ] Predefined reasons (forgot, side effects, ran out, etc.)\n- [ ] Custom reason text entry option\n- [ ] Missed dose alerts after grace period (30 minutes)\n- [ ] Missed dose pattern analysis and reporting\n- [ ] Easy access to recently missed doses for quick logging\n\n## Technical Implementation Notes\n- Missed dose detection logic\n- Reason categorization system\n- Alert scheduling and delivery\n- Pattern analysis algorithms\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-11",
+    "issue": {
+      "title": "[US-11] Adherence history view",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-11\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to view my medication adherence history so I can see my progress and identify patterns in my medication taking\n\n## Acceptance Criteria\n- [ ] Calendar view showing taken/missed/skipped doses\n- [ ] Adherence percentage calculation by day/week/month\n- [ ] Filter by specific medications or date ranges\n- [ ] Color-coded visual indicators for adherence status\n- [ ] Detailed dose history with timestamps and reasons\n- [ ] Export adherence data for healthcare provider review\n\n## Technical Implementation Notes\n- Calendar UI component with medication data\n- Adherence calculation algorithms\n- Data filtering and aggregation\n- Export functionality (PDF/CSV)\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "frontend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-13",
+    "issue": {
+      "title": "[US-13] Track medication quantities",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-13\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to track my medication quantities so I know when I need refills and can avoid running out\n\n## Acceptance Criteria\n- [ ] Initial quantity entry when adding medications\n- [ ] Automatic quantity reduction when doses are marked taken\n- [ ] Manual quantity adjustment for pill counts or prescription changes\n- [ ] Low quantity alerts (configurable threshold)\n- [ ] Quantity history tracking for prescription management\n- [ ] Integration with refill reminder system\n\n## Technical Implementation Notes\n- Inventory tracking system\n- Automatic quantity calculation based on usage\n- Alert threshold configuration\n- Integration with notification system\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "medication-management",
+    "story_id": "US-14",
+    "issue": {
+      "title": "[US-14] Refill reminders",
+      "body": "## PRD Reference\n- **PRD**: Medication Management (medication-management.md)\n- **User Story**: US-14\n- **Priority**: P0 (Critical)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to receive refill reminders so I never run out of important medications\n\n## Acceptance Criteria\n- [ ] Automatic refill reminders based on quantity and usage rate\n- [ ] Configurable reminder timing (7, 5, 3, 1 days before running out)\n- [ ] Multiple reminder channels (app, email, SMS)\n- [ ] Snooze and dismiss options for reminders\n- [ ] Pharmacy information integration for easy refill requests\n- [ ] Refill confirmation to stop reminder notifications\n\n## Technical Implementation Notes\n- Refill prediction algorithm based on usage patterns\n- Multi-channel notification system\n- Reminder scheduling and management\n- Pharmacy integration APIs\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nMedication Entry & Management\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p0-critical",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-1",
+    "issue": {
+      "title": "[US-1] Timely medication reminders",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-1\n- **Priority**: P1 (High)\n- **Story Points**: 8\n\n## User Story\nAs a patient, I want to receive timely medication reminders so I never forget to take my scheduled doses\n\n## Acceptance Criteria\n- [ ] Notifications sent at exact scheduled times\n- [ ] Multiple notification channels (push, email, SMS)\n- [ ] Notification delivery reliability >95%\n- [ ] Time zone support for travelers\n- [ ] Customizable notification sounds and vibration patterns\n- [ ] Delivery confirmation and retry logic for failed notifications\n\n## Technical Implementation Notes\n- Firebase Cloud Messaging for push notifications\n- Twilio SMS integration\n- Email service integration (SendGrid)\n- Scheduled job processing with reliability\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-2",
+    "issue": {
+      "title": "[US-2] Medication details in reminders",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-2\n- **Priority**: P1 (High)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to see medication details in reminder notifications so I know exactly which medication to take\n\n## Acceptance Criteria\n- [ ] Medication name and dosage displayed in notification\n- [ ] Administration instructions (with food, etc.)\n- [ ] Pill photo or description for visual identification\n- [ ] Quantity to take (number of pills/tablets)\n- [ ] Special instructions or warnings\n- [ ] Clear, concise formatting for mobile notifications\n\n## Technical Implementation Notes\n- Rich notification templates\n- Medication data integration\n- Image handling in notifications\n- Template customization system\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-3",
+    "issue": {
+      "title": "[US-3] Snooze reminder functionality",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-3\n- **Priority**: P1 (High)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to snooze medication reminders so I can delay them when I'm temporarily unable to take my medication\n\n## Acceptance Criteria\n- [ ] Snooze options: 5, 10, 15, 30 minutes, 1 hour\n- [ ] Custom snooze time entry option\n- [ ] Maximum 3 snooze attempts per reminder\n- [ ] Snooze action available directly from notification\n- [ ] Visual indication of snoozed medications in app\n- [ ] Escalating urgency for repeatedly snoozed medications\n\n## Technical Implementation Notes\n- Notification action buttons\n- Snooze scheduling and rescheduling logic\n- Snooze attempt tracking\n- Escalation rule engine\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-4",
+    "issue": {
+      "title": "[US-4] Escalating missed dose reminders",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-4\n- **Priority**: P1 (High)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want escalating reminders for missed doses so important medications don't get forgotten\n\n## Acceptance Criteria\n- [ ] Follow-up reminders at 15, 30, 60 minutes after missed dose\n- [ ] Increasing notification urgency (sound, vibration)\n- [ ] Different escalation rules for critical vs routine medications\n- [ ] Emergency contact notification for critical missed doses\n- [ ] User can configure escalation preferences\n- [ ] Smart escalation based on medication importance\n\n## Technical Implementation Notes\n- Escalation rule engine\n- Medication criticality classification\n- Progressive notification intensity\n- Emergency contact integration\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-5",
+    "issue": {
+      "title": "[US-5] Choose reminder channels",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-5\n- **Priority**: P1 (High)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to choose my preferred reminder channels so I receive notifications in the most effective way for me\n\n## Acceptance Criteria\n- [ ] Individual channel selection (push, email, SMS, voice call)\n- [ ] Different channels for different types of reminders\n- [ ] Channel preference by time of day\n- [ ] Fallback channel if primary fails\n- [ ] Easy channel testing and verification\n- [ ] Channel-specific notification content optimization\n\n## Technical Implementation Notes\n- Multi-channel notification routing\n- Channel preference storage and management\n- Fallback logic implementation\n- Channel testing framework\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-6",
+    "issue": {
+      "title": "[US-6] Set quiet hours",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-6\n- **Priority**: P1 (High)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to set quiet hours so I don't receive medication reminders during sleep or other inappropriate times\n\n## Acceptance Criteria\n- [ ] Configurable quiet hours (start and end time)\n- [ ] Different quiet hours for weekdays vs weekends\n- [ ] Emergency medication override for critical reminders\n- [ ] Quiet hour respect across all notification channels\n- [ ] Notification queuing and delivery after quiet hours end\n- [ ] Visual indication when notifications are suppressed\n\n## Technical Implementation Notes\n- Time-based notification filtering\n- Quiet hours configuration UI\n- Emergency override logic\n- Notification queuing system\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-9",
+    "issue": {
+      "title": "[US-9] Low stock alerts",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-9\n- **Priority**: P1 (High)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want to receive alerts when my medication stock is low so I can arrange for refills before running out\n\n## Acceptance Criteria\n- [ ] Automatic low stock detection based on usage patterns\n- [ ] Configurable alert thresholds (days remaining)\n- [ ] Different thresholds for different medication criticalities\n- [ ] Alert frequency limits to avoid spam\n- [ ] Integration with refill reminder system\n- [ ] Pharmacy contact information in alerts\n\n## Technical Implementation Notes\n- Stock level calculation algorithms\n- Usage pattern analysis\n- Threshold configuration system\n- Integration with inventory tracking\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "notification-system",
+    "story_id": "US-10",
+    "issue": {
+      "title": "[US-10] Refill reminders",
+      "body": "## PRD Reference\n- **PRD**: Notification System (notification-system.md)\n- **User Story**: US-10\n- **Priority**: P1 (High)\n- **Story Points**: 4\n\n## User Story\nAs a patient, I want refill reminders so I can maintain continuous medication supply\n\n## Acceptance Criteria\n- [ ] Predictive refill timing based on usage patterns\n- [ ] Reminder escalation (7, 5, 3, 1 days before running out)\n- [ ] Pharmacy integration for easy refill requests\n- [ ] Refill status tracking and confirmation\n- [ ] Insurance and prescription transfer reminders\n- [ ] Bulk refill reminders for multiple medications\n\n## Technical Implementation Notes\n- Refill prediction algorithms\n- Pharmacy API integrations\n- Refill status tracking system\n- Bulk operation handling\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nNotification & Reminders\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "dashboard-analytics",
+    "story_id": "US-1",
+    "issue": {
+      "title": "[US-1] Daily medication status display",
+      "body": "## PRD Reference\n- **PRD**: Dashboard & Analytics (dashboard-analytics.md)\n- **User Story**: US-1\n- **Priority**: P1 (High)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to see my daily medication status so I can quickly understand what I need to take today\n\n## Acceptance Criteria\n- [ ] Real-time display of today's medication schedule\n- [ ] Clear status indicators (due, taken, missed, upcoming)\n- [ ] Time-sensitive ordering of medications by next dose time\n- [ ] Progress bar or percentage for daily completion\n- [ ] Quick action buttons for marking doses taken\n- [ ] Refresh capability for real-time status updates\n\n## Technical Implementation Notes\n- Real-time data synchronization\n- Status calculation algorithms\n- Interactive UI components\n- Optimistic updates for user actions\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nDashboard & Analytics\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "dashboard-analytics",
+    "story_id": "US-2",
+    "issue": {
+      "title": "[US-2] Adherence trend visualization",
+      "body": "## PRD Reference\n- **PRD**: Dashboard & Analytics (dashboard-analytics.md)\n- **User Story**: US-2\n- **Priority**: P1 (High)\n- **Story Points**: 8\n\n## User Story\nAs a patient, I want to view my adherence trends so I can understand my medication-taking patterns over time\n\n## Acceptance Criteria\n- [ ] Interactive line charts showing adherence over time\n- [ ] Multiple time periods (week, month, quarter, year)\n- [ ] Trend indicators (improving, stable, declining)\n- [ ] Medication-specific adherence trends\n- [ ] Comparative view of multiple medications\n- [ ] Exportable charts and data for healthcare providers\n\n## Technical Implementation Notes\n- Chart.js or D3.js integration\n- Adherence calculation algorithms\n- Data aggregation and filtering\n- Export functionality implementation\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nDashboard & Analytics\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "dashboard-analytics",
+    "story_id": "US-3",
+    "issue": {
+      "title": "[US-3] Missed dose pattern analysis",
+      "body": "## PRD Reference\n- **PRD**: Dashboard & Analytics (dashboard-analytics.md)\n- **User Story**: US-3\n- **Priority**: P1 (High)\n- **Story Points**: 5\n\n## User Story\nAs a patient, I want to see missed dose patterns so I can identify when and why I most often forget medications\n\n## Acceptance Criteria\n- [ ] Heat map visualization of missed doses by time and day\n- [ ] Pattern identification (weekends, mornings, evenings)\n- [ ] Correlation analysis with activities or events\n- [ ] Suggested improvements based on patterns\n- [ ] Filter by medication type or specific medications\n- [ ] Exportable pattern reports for provider discussions\n\n## Technical Implementation Notes\n- Pattern detection algorithms\n- Heat map visualization components\n- Statistical analysis for pattern identification\n- Recommendation engine for improvement suggestions\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nDashboard & Analytics\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  },
+  {
+    "prd": "dashboard-analytics",
+    "story_id": "US-4",
+    "issue": {
+      "title": "[US-4] Medication streak tracking",
+      "body": "## PRD Reference\n- **PRD**: Dashboard & Analytics (dashboard-analytics.md)\n- **User Story**: US-4\n- **Priority**: P1 (High)\n- **Story Points**: 3\n\n## User Story\nAs a patient, I want medication streak tracking so I can gamify my adherence and stay motivated\n\n## Acceptance Criteria\n- [ ] Current streak display for each medication\n- [ ] Longest streak achievements and history\n- [ ] Streak milestones and celebration notifications\n- [ ] Overall adherence streak across all medications\n- [ ] Streak recovery tracking after missed doses\n- [ ] Visual progress indicators and badges\n\n## Technical Implementation Notes\n- Streak calculation algorithms\n- Achievement system implementation\n- Gamification UI components\n- Notification integration for celebrations\n\n## Definition of Done\n- [ ] Functional requirement implemented\n- [ ] Unit tests passing (>80% coverage)\n- [ ] Integration tests passing\n- [ ] Security review completed\n- [ ] HIPAA compliance validated\n- [ ] Documentation updated\n- [ ] Code reviewed and approved\n- [ ] Performance benchmarks met\n- [ ] Accessibility requirements met\n- [ ] Mobile responsive (if applicable)\n\n## Epic\nDashboard & Analytics\n\n## Sprint\nSprint 1 (Week 1-2)\n\n---\n*This issue was generated from PRD user story. Please update sprint assignment and add any additional context as needed.*\n",
+      "labels": [
+        "user-story",
+        "prD-linked",
+        "p1-high",
+        "backend"
+      ]
+    }
+  }
+]

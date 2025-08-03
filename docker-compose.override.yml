@@ -1,0 +1,41 @@
+# Override file for local development
+# This file is automatically loaded by docker compose
+
+services:
+  # Development overrides for backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production  # Use production stage but with dev environment
+    environment:
+      - DEBUG=True
+      - RELOAD=True
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload --log-level info
+    volumes:
+      - ./backend/app:/app/app  # Enable hot reload
+      - ./backend/alembic:/app/alembic
+
+  # Development overrides for frontend
+  frontend:
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Enable hot reload in Docker
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true
+
+  # Add development-specific services
+  
+  # API Documentation with Swagger UI
+  swagger-ui:
+    image: swaggerapi/swagger-ui:latest
+    container_name: medcue-swagger
+    ports:
+      - "8080:8080"
+    environment:
+      SWAGGER_JSON_URL: http://localhost:8000/openapi.json
+      BASE_URL: /docs
+    depends_on:
+      - backend
+    networks:
+      - medcue-network

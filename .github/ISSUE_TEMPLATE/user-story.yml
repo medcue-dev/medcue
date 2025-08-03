@@ -1,0 +1,132 @@
+name: 🎯 User Story Implementation
+description: Track PRD user story implementation
+title: "[US-XX] User Story Title"
+labels: ["user-story", "prD-linked"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## PRD Reference
+        Please link this user story to the appropriate PRD section.
+
+  - type: dropdown
+    id: prd
+    attributes:
+      label: PRD Document
+      description: Which PRD does this user story belong to?
+      options:
+        - User Authentication (user-authentication.md)
+        - Medication Management (medication-management.md)
+        - Notification System (notification-system.md)
+        - Dashboard & Analytics (dashboard-analytics.md)
+        - Mobile Application (mobile-application.md)
+        - HIPAA Compliance (hipaa-compliance.md)
+    validations:
+      required: true
+
+  - type: input
+    id: user_story_id
+    attributes:
+      label: User Story ID
+      description: "Format: US-X (e.g., US-1, US-2)"
+      placeholder: "US-1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority level
+      options:
+        - P0 (Critical - MVP Blocker)
+        - P1 (High - MVP Important)
+        - P2 (Medium - Post-MVP)
+        - P3 (Low - Future)
+    validations:
+      required: true
+
+  - type: input
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Effort estimation (1-13 scale)
+      placeholder: "5"
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: "Format: As a [user type], I want [goal] so that [benefit]"
+      placeholder: "As a patient, I want to scan prescription labels so I can quickly add new medications"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable requirements
+      placeholder: |
+        - [ ] User can access camera from medication entry screen
+        - [ ] Barcode scanning accurately extracts medication name
+        - [ ] User can review and edit scanned information before saving
+        - [ ] Error handling for unreadable barcodes
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Implementation Notes
+      description: Architecture, dependencies, and implementation details
+      placeholder: |
+        - Camera API integration
+        - Barcode scanning library
+        - OCR text recognition
+        - Database schema updates needed
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      description: Check all that apply when story is complete
+      options:
+        - label: Functional requirement implemented
+        - label: Unit tests passing (>80% coverage)
+        - label: Integration tests passing
+        - label: Security review completed
+        - label: HIPAA compliance validated
+        - label: Documentation updated
+        - label: Code reviewed and approved
+        - label: Performance benchmarks met
+        - label: Accessibility requirements met
+        - label: Mobile responsive (if applicable)
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Other user stories or tasks that must be completed first
+      placeholder: |
+        - US-4: User login system must be complete
+        - Backend API endpoints for medication management
+
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Epic
+      description: Which epic does this story belong to?
+      options:
+        - User Registration & Authentication
+        - Medication Entry & Management
+        - Notification & Reminders
+        - Dashboard & Analytics
+        - Mobile Application Core
+        - HIPAA Security Implementation
+        - Provider Portal
+        - Advanced Analytics
+    validations:
+      required: true

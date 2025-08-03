@@ -1,0 +1,255 @@
+# MedCue MVP Project Configuration
+# This file documents the GitHub Projects setup for MedCue development
+
+project_name: "MedCue MVP Development"
+description: "HIPAA-compliant medication tracking platform - MVP development"
+
+# Project Views
+views:
+  - name: "Sprint Board"
+    type: "board"
+    layout: "board"
+    columns:
+      - name: "Backlog"
+        items_limit: 50
+      - name: "Sprint Ready"
+        items_limit: 20
+      - name: "In Progress"
+        items_limit: 10
+      - name: "Code Review"
+        items_limit: 10
+      - name: "Testing"
+        items_limit: 10
+      - name: "Done"
+        items_limit: 100
+
+  - name: "PRD Progress"
+    type: "table"
+    group_by: "Epic"
+    sort_by: "Priority"
+    fields:
+      - "Title"
+      - "PRD"
+      - "Epic"
+      - "Priority"
+      - "Story Points"
+      - "Assignee"
+      - "Status"
+      - "Sprint"
+
+  - name: "Roadmap"
+    type: "roadmap"
+    group_by: "Epic"
+    zoom_level: "month"
+    start_date_field: "Start Date"
+    target_date_field: "Target Date"
+
+# Custom Fields
+custom_fields:
+  - name: "PRD"
+    type: "single_select"
+    options:
+      - "User Authentication"
+      - "Medication Management"
+      - "Notification System"
+      - "Dashboard Analytics"
+      - "Mobile Application"
+      - "HIPAA Compliance"
+
+  - name: "Epic"
+    type: "single_select"
+    options:
+      - "User Registration & Authentication"
+      - "Medication Entry & Management"
+      - "Notification & Reminders"
+      - "Dashboard & Analytics"
+      - "Mobile Application Core"
+      - "HIPAA Security Implementation"
+      - "Provider Portal"
+      - "Advanced Analytics"
+
+  - name: "Priority"
+    type: "single_select"
+    options:
+      - "P0 (Critical)"
+      - "P1 (High)"
+      - "P2 (Medium)"
+      - "P3 (Low)"
+
+  - name: "Story Points"
+    type: "number"
+    min: 1
+    max: 13
+
+  - name: "Sprint"
+    type: "single_select"
+    options:
+      - "Sprint 1 (Week 1-2)"
+      - "Sprint 2 (Week 3-4)"
+      - "Sprint 3 (Week 5-6)"
+      - "Sprint 4 (Week 7-8)"
+      - "Backlog"
+      - "Future"
+
+  - name: "User Story ID"
+    type: "text"
+    description: "Format: US-X (e.g., US-1)"
+
+  - name: "Start Date"
+    type: "date"
+
+  - name: "Target Date" 
+    type: "date"
+
+  - name: "Effort Points"
+    type: "number"
+    min: 1
+    max: 13
+    description: "For technical tasks"
+
+# Labels for Issues
+labels:
+  # Priority Labels
+  - name: "P0-critical"
+    color: "d73a49"
+    description: "Critical priority - MVP blocker"
+  
+  - name: "P1-high"
+    color: "fb8500"
+    description: "High priority - Important for MVP"
+  
+  - name: "P2-medium" 
+    color: "ffb300"
+    description: "Medium priority - Post-MVP"
+  
+  - name: "P3-low"
+    color: "28a745"
+    description: "Low priority - Future enhancement"
+
+  # Type Labels
+  - name: "user-story"
+    color: "0366d6"
+    description: "PRD user story implementation"
+  
+  - name: "technical-task"
+    color: "6f42c1"
+    description: "Technical implementation task"
+  
+  - name: "bug"
+    color: "d73a49"
+    description: "Bug report or fix"
+  
+  - name: "documentation"
+    color: "0075ca"
+    description: "Documentation updates"
+
+  # Component Labels
+  - name: "frontend"
+    color: "1f77b4"
+    description: "Frontend React/Next.js work"
+  
+  - name: "backend"
+    color: "ff7f0e"
+    description: "Backend FastAPI work"
+  
+  - name: "database"
+    color: "2ca02c"
+    description: "Database schema or queries"
+  
+  - name: "mobile"
+    color: "d62728"
+    description: "Mobile application work"
+  
+  - name: "devops"
+    color: "9467bd"
+    description: "Infrastructure and deployment"
+  
+  - name: "security"
+    color: "8c564b"
+    description: "Security or HIPAA compliance"
+
+  # Status Labels
+  - name: "prD-linked"
+    color: "c5def5"
+    description: "Linked to PRD requirement"
+  
+  - name: "needs-review"
+    color: "fbca04"
+    description: "Needs code review"
+  
+  - name: "blocked"
+    color: "e99695"
+    description: "Blocked by dependency"
+  
+  - name: "ready-for-test"
+    color: "c2e0c6"
+    description: "Ready for QA testing"
+
+# Milestones
+milestones:
+  - name: "MVP Phase 1 - Core Platform"
+    description: "User authentication, medication management, basic notifications"
+    due_date: "2024-02-29"
+    
+  - name: "MVP Phase 2 - Enhanced Features"
+    description: "Advanced analytics, provider access, enhanced notifications"
+    due_date: "2024-04-30"
+    
+  - name: "MVP Phase 3 - Mobile & Scale"
+    description: "Mobile apps, advanced integrations, enterprise features"
+    due_date: "2024-06-30"
+
+# Automation Rules
+automation:
+  - name: "Auto-assign PRD field"
+    trigger: "issue_opened"
+    condition: "title contains [US-"
+    action: "auto_populate_field"
+    field: "PRD"
+    value: "extract_from_body"
+
+  - name: "Move to Sprint Ready"
+    trigger: "field_changed"
+    condition: "all acceptance criteria defined AND story points assigned"
+    action: "move_to_column"
+    column: "Sprint Ready"
+
+  - name: "Auto-close linked PR"
+    trigger: "pull_request_merged"
+    condition: "linked to issue"
+    action: "close_issue"
+    comment: "Automatically closed by merged PR"
+
+# Sprint Planning Template
+sprint_template: |
+  # Sprint X Planning - [Date Range]
+  
+  ## Sprint Goal
+  [Primary objective for this sprint]
+  
+  ## PRD Alignment
+  - **Primary PRD**: [PRD Name]
+  - **User Stories**: US-X through US-Y
+  - **Business Value**: [Expected business impact]
+  
+  ## Sprint Backlog
+  ### High Priority (Must Have)
+  - [ ] [User Story] ([Story Points]) - @assignee
+  
+  ### Medium Priority (Should Have) 
+  - [ ] [User Story] ([Story Points]) - @assignee
+  
+  ### Low Priority (Could Have)
+  - [ ] [User Story] ([Story Points]) - @assignee
+  
+  ## Success Criteria
+  - [ ] All high priority stories completed
+  - [ ] Demo-ready functionality
+  - [ ] >80% test coverage maintained
+  - [ ] No critical security vulnerabilities
+  - [ ] HIPAA compliance maintained
+  
+  ## Risks & Dependencies
+  - **Risk**: [Description]
+  - **Mitigation**: [Plan]
+  - **Dependencies**: [External requirements]

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📋 Project Management
+    url: https://github.com/ashish/medcue/projects
+    about: View project boards and sprint planning
+  - name: 📚 PRD Documentation
+    url: https://github.com/ashish/medcue/tree/main/docs/prds
+    about: Review Product Requirements Documents
+  - name: 🏗️ Architecture Docs
+    url: https://github.com/ashish/medcue/tree/main/docs
+    about: Technical architecture and setup guides
+  - name: 🔒 Security Policy
+    url: https://github.com/ashish/medcue/security/policy
+    about: Report security vulnerabilities

@@ -1,0 +1,153 @@
+name: 🔧 Technical Task
+description: Track technical implementation tasks
+title: "[TECH] Technical Task Title"
+labels: ["technical-task", "engineering"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Technical Task
+        For infrastructure, DevOps, refactoring, and technical debt items.
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task Type
+      description: What type of technical work is this?
+      options:
+        - Infrastructure Setup
+        - Database Schema/Migration
+        - API Development
+        - Frontend Component
+        - Security Implementation
+        - Performance Optimization
+        - DevOps/CI/CD
+        - Testing Framework
+        - Documentation
+        - Refactoring
+        - Bug Fix
+        - Technical Debt
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Technical priority level
+      options:
+        - P0 (Critical - Blocking)
+        - P1 (High - Important)
+        - P2 (Medium - Nice to have)
+        - P3 (Low - Future)
+    validations:
+      required: true
+
+  - type: input
+    id: effort_points
+    attributes:
+      label: Effort Points
+      description: Technical complexity estimation (1-13 scale)
+      placeholder: "3"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Detailed description of the technical work needed
+      placeholder: |
+        Implement JWT authentication middleware for FastAPI backend:
+        - Create JWT token generation and validation
+        - Add authentication decorators
+        - Implement token refresh mechanism
+        - Add rate limiting for auth endpoints
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Technical Acceptance Criteria
+      description: Specific technical requirements that must be met
+      placeholder: |
+        - [ ] JWT tokens generated with 15-minute expiration
+        - [ ] Refresh tokens valid for 7 days
+        - [ ] Rate limiting: 5 failed attempts per minute
+        - [ ] All endpoints protected except public routes
+        - [ ] Unit tests with >90% coverage
+        - [ ] Integration tests for auth flow
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_notes
+    attributes:
+      label: Implementation Details
+      description: Technical approach, libraries, and architectural decisions
+      placeholder: |
+        **Libraries:**
+        - python-jose for JWT handling
+        - passlib for password hashing
+        - slowapi for rate limiting
+
+        **Architecture:**
+        - Middleware pattern for request authentication
+        - Dependency injection for route protection
+        - Redis for token blacklisting
+
+  - type: textarea
+    id: testing_strategy
+    attributes:
+      label: Testing Strategy
+      description: How will this be tested?
+      placeholder: |
+        **Unit Tests:**
+        - Token generation/validation functions
+        - Password hashing utilities
+        - Rate limiting logic
+
+        **Integration Tests:**
+        - Complete authentication flow
+        - Protected endpoint access
+        - Token refresh mechanism
+
+  - type: checkboxes
+    id: definition_of_done
+    attributes:
+      label: Technical Definition of Done
+      description: Check all that apply when task is complete
+      options:
+        - label: Implementation completed
+        - label: Unit tests written and passing
+        - label: Integration tests written and passing
+        - label: Code review completed
+        - label: Security review passed
+        - label: Performance requirements met
+        - label: Documentation updated
+        - label: HIPAA compliance verified (if applicable)
+        - label: Deployment tested
+        - label: Monitoring/logging implemented
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Other tasks or infrastructure that must be in place
+      placeholder: |
+        - Database schema must be created
+        - Redis instance must be available
+        - Environment variables configured
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Mitigation
+      description: Potential issues and how to address them
+      placeholder: |
+        **Risk:** JWT secret key management
+        **Mitigation:** Use environment variables and key rotation strategy
+
+        **Risk:** Token storage security
+        **Mitigation:** Use httpOnly cookies for web, secure storage for mobile

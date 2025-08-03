@@ -1,0 +1,15 @@
+[submodule "docs"]
+	path = docs
+	url = git@github.com:medcue-dev/docs.git
+[submodule "scripts"]
+	path = scripts
+	url = git@github.com:medcue-dev/scripts.git
+[submodule "website"]
+	path = website
+	url = git@github.com:medcue-dev/website.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:medcue-dev/frontend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:medcue-dev/backend.git

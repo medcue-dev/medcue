@@ -1,0 +1,135 @@
+name: 🐛 Bug Report
+description: Report a bug or issue
+title: "[BUG] Bug Title"
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+        Please provide detailed information to help us fix the issue quickly.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How critical is this bug?
+      options:
+        - Critical (System down, data loss, security issue)
+        - High (Major feature broken, significant user impact)
+        - Medium (Feature partially working, workaround available)
+        - Low (Minor issue, cosmetic problem)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of the system is affected?
+      options:
+        - Frontend (React/Next.js)
+        - Backend (FastAPI)
+        - Database (PostgreSQL)
+        - Authentication
+        - Notifications
+        - Mobile App
+        - Infrastructure/DevOps
+        - Documentation
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear description of what's broken
+      placeholder: |
+        When trying to mark a medication dose as taken, the system shows a loading spinner but never completes the action.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the bug
+      placeholder: |
+        1. Log in to the application
+        2. Navigate to today's medication list
+        3. Click "Mark as Taken" for any medication
+        4. Observe the loading spinner appears but never disappears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: |
+        The medication should be marked as taken, the UI should update to show "Taken" status, and a success message should appear.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: |
+        The loading spinner appears and never disappears. The medication remains in "Due" status. No error message is shown.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: System and environment details
+      placeholder: |
+        **Browser:** Chrome 120.0.0
+        **OS:** macOS 14.1
+        **Environment:** Development/Staging/Production
+        **User Role:** Patient/Provider/Admin
+    validations:
+      required: true
+
+  - type: textarea
+    id: error_logs
+    attributes:
+      label: Error Logs
+      description: Any error messages, console logs, or stack traces
+      placeholder: |
+        ```
+        Console Errors:
+        [Error] Failed to fetch medication status: NetworkError
+
+        Server Logs:
+        2024-01-08 10:30:45 ERROR: Database connection timeout
+        ```
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Screenshots, videos, or other relevant information
+      placeholder: |
+        - This started happening after the latest deployment
+        - Affects only certain medications with specific schedules
+        - Workaround: Refreshing the page allows the action to complete
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: Check all that apply
+      options:
+        - label: Blocks user workflow
+        - label: Data integrity concern
+        - label: Security implication
+        - label: HIPAA compliance issue
+        - label: Performance degradation
+        - label: Affects multiple users
+        - label: Mobile-specific issue
+        - label: Browser-specific issue
